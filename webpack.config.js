@@ -12,7 +12,10 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
+        use: [
+          'babel-loader',
+          'eslint-loader',
+        ],
       },
     ],
   },
@@ -20,4 +23,3 @@ module.exports = {
     contentBase: './dist',
   },
 };
-
